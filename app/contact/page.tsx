@@ -95,7 +95,7 @@ export default function Contact() {
                       name={f.name}
                       placeholder={f.placeholder}
                       required
-                      style={{ width: "100%", padding: "12px 0", borderBottom: "1px solid var(--hairline-strong)", border: "none", borderBottom: "1px solid var(--hairline-strong)", background: "transparent", fontSize: 15, color: "var(--ink)", outline: "none", fontFamily: "inherit" }}
+                      style={{ width: "100%", padding: "12px 0", border: "none", borderBottom: "1px solid var(--hairline-strong)", background: "transparent", fontSize: 15, color: "var(--ink)", outline: "none", fontFamily: "inherit" }}
                     />
                   </div>
                 ))}
