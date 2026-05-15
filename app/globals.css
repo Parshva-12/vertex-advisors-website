@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --gold-100: #FBF5E5;
+  --gold-200: #F2E4BC;
+  --gold-300: #E2CB85;
+  --gold-400: #C9A957;
+  --gold-500: #B8924A;
+  --gold-600: #9F7D3A;
+  --gold-700: #876B2D;
+  --gold-800: #5F4B1F;
+
+  --ivory:      #F8F5EE;
+  --ivory-soft: #FAF7F0;
+  --paper:      #FFFFFF;
+  --hairline:   rgba(26,22,17,0.10);
+  --hairline-strong: rgba(26,22,17,0.18);
+
+  --stone-200: #D9D2C2;
+  --stone-400: #A89E8A;
+  --stone-500: #8B8273;
+  --stone-700: #4F4838;
+
+  --ink:       #1A1611;
+  --ink-soft:  #3A332A;
+  --navy:      #14181F;
+
+  --serif: 'Cormorant Garamond', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: var(--ivory);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-700);
+  font-weight: 500;
+}
+
+.peak-rule {
+  height: 8px;
+  background-image:
+    linear-gradient(45deg, transparent 49%, var(--gold-500) 49%, var(--gold-500) 51%, transparent 51%),
+    linear-gradient(-45deg, transparent 49%, var(--gold-500) 49%, var(--gold-500) 51%, transparent 51%);
+  background-size: 12px 8px;
+  background-repeat: repeat-x;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--ivory);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--gold-700); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline-strong);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+.btn-ghost:hover { border-color: var(--ink); }
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--gold-400);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.btn-gold:hover { background: var(--gold-700); color: var(--ivory); }
