@@ -10,7 +10,7 @@ export default function Nav() {
   return (
     <nav style={{
       display: "flex", justifyContent: "space-between", alignItems: "center",
-      padding: "20px 56px", borderBottom: "1px solid var(--hairline)",
+      padding: "20px var(--pad-x)", borderBottom: "1px solid var(--hairline)",
       background: "var(--ivory)", position: "sticky", top: 0, zIndex: 50,
     }}>
       <Link href="/" style={{ textDecoration: "none" }}>
@@ -20,7 +20,7 @@ export default function Nav() {
         <div className="eyebrow" style={{ fontSize: 9, marginTop: 2 }}>Finance & Advisory · Mumbai</div>
       </Link>
 
-      <div style={{ display: "flex", gap: 32, fontSize: 13.5 }}>
+      <div className="nav-r-links">
         {links.map((l) => {
           const href = l === "Home" ? "/" : `/${l.toLowerCase()}`;
           const active = l === "Home" ? path === "/" : path.startsWith(`/${l.toLowerCase()}`);
@@ -37,8 +37,8 @@ export default function Nav() {
         })}
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-        <span className="eyebrow" style={{ color: "var(--stone-500)" }}>Ghatkopar East</span>
+      <div className="nav-r-loc">
+        <span className="eyebrow nav-r-loc-text" style={{ color: "var(--stone-500)" }}>Mumbai</span>
         <Link href="/contact" className="btn-primary">Book a call →</Link>
       </div>
     </nav>

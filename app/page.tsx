@@ -18,9 +18,9 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section style={{ padding: "88px 56px 96px", position: "relative", overflow: "hidden", background: "var(--ivory)" }}>
-        <div style={{ position: "absolute", top: -40, right: -60, opacity: 0.045, fontFamily: "var(--serif)", fontSize: 560, fontWeight: 700, lineHeight: 1, color: "var(--gold-500)", pointerEvents: "none", userSelect: "none" }}>V</div>
-        <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 56, alignItems: "flex-end", position: "relative" }}>
+      <section style={{ padding: "88px var(--pad-x) 96px", position: "relative", overflow: "hidden", background: "var(--ivory)" }}>
+        <div className="r-hide-m" style={{ position: "absolute", top: -40, right: -60, opacity: 0.045, fontFamily: "var(--serif)", fontSize: 560, fontWeight: 700, lineHeight: 1, color: "var(--gold-500)", pointerEvents: "none", userSelect: "none" }}>V</div>
+        <div className="r-stack r-gap" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 56, alignItems: "flex-end", position: "relative" }}>
           <div>
             <div className="eyebrow" style={{ marginBottom: 22 }}>Finance & Advisory · Mumbai</div>
             <h1 style={{ fontSize: "clamp(60px, 7vw, 108px)", lineHeight: 0.95, fontFamily: "var(--serif)", fontWeight: 700 }}>
@@ -39,14 +39,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, marginTop: 88, borderTop: "1px solid var(--hairline)", borderBottom: "1px solid var(--hairline)", background: "var(--hairline)" }}>
+        <div className="r-stack r-mt-lg" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, marginTop: 88, borderTop: "1px solid var(--hairline)", borderBottom: "1px solid var(--hairline)", background: "var(--hairline)" }}>
           {[
             { n: "4", l: "Partners. No middle layer." },
-            { n: "24×7", l: "Advisory access" },
+            { n: "Partner-led", l: "For businesses that move fast" },
             { n: "Full-stack", l: "From filings to strategy" },
           ].map((s) => (
-            <div key={s.n} style={{ background: "var(--ivory)", padding: "32px 28px" }}>
-              <div style={{ fontFamily: "var(--serif)", fontSize: 52, fontWeight: 600, lineHeight: 1 }}>{s.n}</div>
+            <div key={s.n} className="r-stat-item" style={{ background: "var(--ivory)", padding: "32px 28px" }}>
+              <div className="r-stat-n" style={{ fontFamily: "var(--serif)", fontSize: 52, fontWeight: 600, lineHeight: 1 }}>{s.n}</div>
               <div style={{ fontSize: 13, color: "var(--stone-500)", marginTop: 10 }}>{s.l}</div>
             </div>
           ))}
@@ -54,14 +54,14 @@ export default function Home() {
       </section>
 
       {/* THE PROMISE */}
-      <section style={{ background: "var(--ink)", color: "var(--ivory)", padding: "120px 56px", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: "var(--ink)", color: "var(--ivory)", padding: "120px var(--pad-x)", position: "relative", overflow: "hidden" }}>
         <div className="peak-rule" style={{ position: "absolute", top: 0, left: 0, right: 0 }} />
         <div className="eyebrow" style={{ color: "var(--gold-400)", marginBottom: 32 }}>The Promise</div>
         <h2 style={{ fontSize: "clamp(36px, 5vw, 84px)", lineHeight: 1.05, fontFamily: "var(--serif)", fontWeight: 600, maxWidth: 1100 }}>
           Most CAs file your returns.<br />
           <em style={{ color: "var(--gold-400)", fontWeight: 500 }}>We understand your business.</em>
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 56, marginTop: 80, borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 48 }}>
+        <div className="r-stack r-gap" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 56, marginTop: 80, borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 48 }}>
           {[
             { n: "01", t: "We learn the company", s: "Before the first ledger. Founders, runway, story, customers — context first, compliance second." },
             { n: "02", t: "We work alongside, not after", s: "On every term sheet, every board pack, every decision that has a number attached." },
@@ -77,13 +77,13 @@ export default function Home() {
       </section>
 
       {/* SERVICES */}
-      <section style={{ padding: "120px 56px", background: "var(--ivory)" }}>
+      <section style={{ padding: "120px var(--pad-x)", background: "var(--ivory)" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 16 }}>
           <div className="eyebrow">What we do</div>
           <div style={{ flex: 1, height: 1, background: "var(--hairline)" }} />
           <div className="eyebrow">04 Practices</div>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 56, alignItems: "flex-end", marginBottom: 64 }}>
+        <div className="r-stack r-gap" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 56, alignItems: "flex-end", marginBottom: 64 }}>
           <h2 style={{ fontSize: "clamp(36px, 4.5vw, 76px)", lineHeight: 1, fontFamily: "var(--serif)", fontWeight: 600 }}>
             From individual tax filings to{" "}<em style={{ color: "var(--gold-500)" }}>full business strategy.</em>
           </h2>
@@ -91,7 +91,7 @@ export default function Home() {
             Regulatory, advisory, compliance, and everything in between — one team, completely covered.
           </p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 1, background: "var(--hairline)", border: "1px solid var(--hairline)" }}>
+        <div className="r-stack" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 1, background: "var(--hairline)", border: "1px solid var(--hairline)" }}>
           {services.map((s) => (
             <div key={s.n} style={{ background: "var(--ivory)", padding: "40px 40px 44px", display: "flex", flexDirection: "column", gap: 14, minHeight: 300 }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* PARTNERS */}
-      <section style={{ padding: "120px 56px", background: "var(--ivory-soft)" }}>
+      <section style={{ padding: "120px var(--pad-x)", background: "var(--ivory-soft)" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 40 }}>
           <div className="eyebrow">The Partners</div>
           <div style={{ flex: 1, height: 1, background: "var(--hairline)" }} />
@@ -122,7 +122,7 @@ export default function Home() {
         <h2 style={{ fontSize: "clamp(36px, 4.5vw, 72px)", lineHeight: 1, fontFamily: "var(--serif)", fontWeight: 600, marginBottom: 72, maxWidth: 900 }}>
           Young, sharp, and built for businesses that{" "}<em style={{ color: "var(--gold-500)" }}>move fast.</em>
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
+        <div className="r-2col" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 24 }}>
           {partners.map((p) => (
             <div key={p.n}>
               <div style={{ width: "100%", aspectRatio: "3/4", background: "var(--gold-100)", border: "1px solid var(--hairline)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--serif)", fontSize: 80, fontWeight: 600, color: "var(--gold-300)" }}>
@@ -137,9 +137,9 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "88px 56px", background: "var(--gold-500)", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", top: -120, right: -80, opacity: 0.07, fontFamily: "var(--serif)", fontSize: 560, fontWeight: 700, lineHeight: 1, color: "var(--ink)", pointerEvents: "none" }}>V</div>
-        <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 48, alignItems: "center", position: "relative" }}>
+      <section style={{ padding: "88px var(--pad-x)", background: "var(--gold-500)", position: "relative", overflow: "hidden" }}>
+        <div className="r-hide-m" style={{ position: "absolute", top: -120, right: -80, opacity: 0.07, fontFamily: "var(--serif)", fontSize: 560, fontWeight: 700, lineHeight: 1, color: "var(--ink)", pointerEvents: "none" }}>V</div>
+        <div className="r-stack r-gap" style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 48, alignItems: "center", position: "relative" }}>
           <div>
             <div className="eyebrow" style={{ color: "var(--ink)", marginBottom: 16 }}>Let&apos;s talk</div>
             <h2 style={{ fontSize: "clamp(36px, 4vw, 72px)", lineHeight: 1.05, fontFamily: "var(--serif)", fontWeight: 600, color: "var(--ink)" }}>

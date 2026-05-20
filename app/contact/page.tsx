@@ -17,14 +17,14 @@ export default function Contact() {
   return (
     <>
       {/* HEADER */}
-      <section style={{ padding: "80px 56px 48px", background: "var(--ivory)" }}>
+      <section style={{ padding: "80px var(--pad-x) 48px", background: "var(--ivory)" }}>
         <div className="eyebrow" style={{ marginBottom: 22 }}>Contact · Mumbai</div>
         <h1 style={{ fontSize: "clamp(56px, 7vw, 120px)", lineHeight: 0.94, fontFamily: "var(--serif)", fontWeight: 700 }}>
           Let&apos;s <em style={{ color: "var(--gold-500)", fontWeight: 500 }}>talk.</em>
         </h1>
       </section>
 
-      <section style={{ padding: "20px 56px 120px", display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 64, alignItems: "flex-start", background: "var(--ivory)" }}>
+      <section className="r-stack r-gap" style={{ padding: "20px var(--pad-x) 120px", display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 64, alignItems: "flex-start", background: "var(--ivory)" }}>
 
         {/* LEFT — contact details */}
         <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
@@ -69,7 +69,7 @@ export default function Contact() {
         </div>
 
         {/* RIGHT — form */}
-        <div style={{ background: "var(--paper)", border: "1px solid var(--hairline)", padding: 48 }}>
+        <div className="r-form" style={{ background: "var(--paper)", border: "1px solid var(--hairline)", padding: 48 }}>
           {submitted ? (
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: 400, textAlign: "center", gap: 16 }}>
               <div style={{ fontFamily: "var(--serif)", fontSize: 48, fontWeight: 600 }}>Thank you.</div>

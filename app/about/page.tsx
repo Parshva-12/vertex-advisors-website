@@ -18,7 +18,7 @@ export default function About() {
   return (
     <>
       {/* HEADER */}
-      <section style={{ padding: "80px 56px 60px", background: "var(--ivory)" }}>
+      <section style={{ padding: "80px var(--pad-x) 60px", background: "var(--ivory)" }}>
         <div className="eyebrow" style={{ marginBottom: 22 }}>About · The Firm</div>
         <h1 style={{ fontSize: "clamp(52px, 7vw, 108px)", lineHeight: 0.96, fontFamily: "var(--serif)", fontWeight: 700, maxWidth: 1100 }}>
           Young, sharp, and{" "}<em style={{ color: "var(--gold-500)", fontWeight: 500 }}>built for businesses that move fast.</em>
@@ -26,7 +26,7 @@ export default function About() {
       </section>
 
       {/* STORY */}
-      <section style={{ padding: "40px 56px 96px", display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 64, alignItems: "flex-start", background: "var(--ivory)" }}>
+      <section className="r-stack r-gap" style={{ padding: "40px var(--pad-x) 96px", display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 64, alignItems: "flex-start", background: "var(--ivory)" }}>
         <div>
           <div className="eyebrow" style={{ marginBottom: 20 }}>Our story</div>
           <p style={{ fontFamily: "var(--serif)", fontSize: 24, lineHeight: 1.45, color: "var(--ink)", fontWeight: 500, marginBottom: 24 }}>
@@ -48,14 +48,14 @@ export default function About() {
       </section>
 
       {/* PRINCIPLES */}
-      <section style={{ padding: "100px 56px", background: "var(--ink)", color: "var(--ivory)" }}>
+      <section style={{ padding: "100px var(--pad-x)", background: "var(--ink)", color: "var(--ivory)" }}>
         <div className="eyebrow" style={{ color: "var(--gold-400)", marginBottom: 20 }}>How we work</div>
         <h2 style={{ fontSize: "clamp(36px, 4vw, 68px)", fontFamily: "var(--serif)", fontWeight: 600, maxWidth: 900, marginBottom: 64 }}>
           Four principles.{" "}<em style={{ color: "var(--gold-400)", fontWeight: 500 }}>No exceptions.</em>
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 1, background: "rgba(255,255,255,0.08)" }}>
+        <div className="r-stack" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 1, background: "rgba(255,255,255,0.08)" }}>
           {principles.map((p) => (
-            <div key={p.n} style={{ background: "var(--ink)", padding: "48px 40px", minHeight: 240 }}>
+            <div key={p.n} className="r-card" style={{ background: "var(--ink)", padding: "48px 40px", minHeight: 240 }}>
               <div className="eyebrow" style={{ color: "var(--gold-400)" }}>{p.n}</div>
               <h3 style={{ fontFamily: "var(--serif)", fontSize: 32, fontWeight: 600, marginTop: 20, color: "var(--ivory)" }}>{p.t}</h3>
               <p style={{ fontSize: 14.5, color: "rgba(255,255,255,0.65)", marginTop: 14, lineHeight: 1.6 }}>{p.d}</p>
@@ -65,15 +65,15 @@ export default function About() {
       </section>
 
       {/* PARTNERS DETAIL */}
-      <section style={{ padding: "120px 56px", background: "var(--ivory)" }}>
+      <section style={{ padding: "120px var(--pad-x)", background: "var(--ivory)" }}>
         <div className="eyebrow" style={{ marginBottom: 20 }}>The Partners</div>
         <h2 style={{ fontSize: "clamp(36px, 4vw, 68px)", fontFamily: "var(--serif)", fontWeight: 600, marginBottom: 64, maxWidth: 800 }}>
           Four partners.{" "}<em style={{ color: "var(--gold-500)" }}>One table.</em>
         </h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "var(--hairline)", border: "1px solid var(--hairline)" }}>
           {partners.map((p, i) => (
-            <div key={p.n} style={{ background: "var(--ivory)", padding: "36px 40px", display: "grid", gridTemplateColumns: "48px 1.2fr 1fr 1.5fr 24px", gap: 32, alignItems: "center" }}>
-              <div className="eyebrow">0{i + 1}</div>
+            <div key={p.n} className="r-prow" style={{ background: "var(--ivory)", padding: "36px 40px", display: "grid", gridTemplateColumns: "48px 1.2fr 1fr 1.5fr 24px", gap: 32, alignItems: "center" }}>
+              <div className="eyebrow r-hide-m">0{i + 1}</div>
               <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
                 <div style={{ width: 48, height: 48, borderRadius: "50%", background: "var(--gold-200)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--serif)", fontWeight: 600, color: "var(--gold-700)", fontSize: 18, flexShrink: 0 }}>
                   {p.i}
@@ -82,14 +82,14 @@ export default function About() {
               </div>
               <div className="eyebrow" style={{ color: "var(--gold-700)" }}>{p.r}</div>
               <div style={{ fontSize: 14, color: "var(--ink-soft)", lineHeight: 1.55 }}>{p.d}</div>
-              <span style={{ color: "var(--gold-500)" }}>→</span>
+              <span className="r-hide-m" style={{ color: "var(--gold-500)" }}>→</span>
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "80px 56px", background: "var(--ivory-soft)", borderTop: "1px solid var(--hairline)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 40 }}>
+      <section className="cta-r-about" style={{ padding: "80px var(--pad-x)", background: "var(--ivory-soft)", borderTop: "1px solid var(--hairline)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 40 }}>
         <h2 style={{ fontFamily: "var(--serif)", fontSize: "clamp(32px, 3.5vw, 56px)", fontWeight: 600, maxWidth: 600 }}>
           Ready to work with a team that{" "}<em style={{ color: "var(--gold-500)" }}>actually shows up?</em>
         </h2>

@@ -31,7 +31,7 @@ export default function Services() {
   return (
     <>
       {/* HEADER */}
-      <section style={{ padding: "80px 56px 48px", background: "var(--ivory)" }}>
+      <section style={{ padding: "80px var(--pad-x) 48px", background: "var(--ivory)" }}>
         <div className="eyebrow" style={{ marginBottom: 22 }}>Services · 04 Practices</div>
         <h1 style={{ fontSize: "clamp(48px, 6vw, 104px)", lineHeight: 0.96, fontFamily: "var(--serif)", fontWeight: 700, maxWidth: 1100 }}>
           Regulatory, advisory,{" "}<em style={{ color: "var(--gold-500)", fontWeight: 500 }}>and everything in between.</em>
@@ -44,11 +44,11 @@ export default function Services() {
       {/* SERVICE DEEP DIVES */}
       {services.map((s, i) => (
         <section key={s.n} style={{
-          padding: "88px 56px",
+          padding: "88px var(--pad-x)",
           background: i % 2 === 1 ? "var(--ivory-soft)" : "var(--ivory)",
           borderTop: "1px solid var(--hairline)",
         }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64, alignItems: "flex-start" }}>
+          <div className="r-stack r-gap" style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64, alignItems: "flex-start" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 24 }}>
                 <div className="eyebrow">{s.n}</div>
@@ -68,7 +68,7 @@ export default function Services() {
               </div>
 
               <div className="eyebrow" style={{ marginBottom: 16 }}>Typical deliverables</div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 1, background: "var(--hairline)", border: "1px solid var(--hairline)" }}>
+              <div className="r-stack" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 1, background: "var(--hairline)", border: "1px solid var(--hairline)" }}>
                 {s.deliverables.map((d, j) => (
                   <div key={d} style={{ background: i % 2 === 1 ? "var(--ivory-soft)" : "var(--ivory)", padding: "24px", display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
                     <div>
@@ -85,9 +85,9 @@ export default function Services() {
       ))}
 
       {/* PRICING */}
-      <section style={{ padding: "100px 56px", background: "var(--ink)", color: "var(--ivory)" }}>
+      <section style={{ padding: "100px var(--pad-x)", background: "var(--ink)", color: "var(--ivory)" }}>
         <div className="eyebrow" style={{ color: "var(--gold-400)", marginBottom: 24 }}>On pricing</div>
-        <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: 56, alignItems: "flex-end" }}>
+        <div className="r-stack r-gap" style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: 56, alignItems: "flex-end" }}>
           <h2 style={{ fontSize: "clamp(36px, 4vw, 68px)", fontFamily: "var(--serif)", fontWeight: 600 }}>
             We quote against scope,{" "}<em style={{ color: "var(--gold-400)", fontWeight: 500 }}>not hours.</em>
           </h2>

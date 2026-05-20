@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer style={{ background: "var(--navy)", color: "var(--ivory)", padding: "64px 56px 40px", position: "relative", overflow: "hidden" }}>
+    <footer style={{ background: "var(--navy)", color: "var(--ivory)", padding: "64px var(--pad-x) 40px", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", bottom: -60, right: -40, opacity: 0.06, fontSize: 400, fontFamily: "var(--serif)", fontWeight: 700, lineHeight: 1, color: "var(--gold-400)", pointerEvents: "none", userSelect: "none" }}>V</div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: 48, position: "relative" }}>
+      <div className="r-2col r-gap" style={{ display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: 48, position: "relative" }}>
         <div>
           <div style={{ fontFamily: "var(--serif)", fontSize: 26, fontWeight: 700, color: "var(--ivory)" }}>
             Vertex <span style={{ color: "var(--gold-400)", fontStyle: "italic" }}>Advisors</span>
