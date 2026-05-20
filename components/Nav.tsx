@@ -13,11 +13,18 @@ export default function Nav() {
       padding: "20px var(--pad-x)", borderBottom: "1px solid var(--hairline)",
       background: "var(--ivory)", position: "sticky", top: 0, zIndex: 50,
     }}>
-      <Link href="/" style={{ textDecoration: "none" }}>
-        <div style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 700, color: "var(--ink)", letterSpacing: "-0.02em", lineHeight: 1 }}>
-          Vertex <span style={{ color: "var(--gold-500)", fontStyle: "italic" }}>Advisors</span>
+      <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: 13 }}>
+        <svg width="18" height="21" viewBox="0 0 40 52" fill="none" aria-hidden="true">
+          <path d="M20 6 L5 48" stroke="var(--gold-500)" strokeWidth="2.2" strokeLinecap="round"/>
+          <path d="M20 6 L35 48" stroke="var(--gold-500)" strokeWidth="2.2" strokeLinecap="round"/>
+          <circle cx="20" cy="6" r="2.8" fill="var(--gold-500)"/>
+        </svg>
+        <div>
+          <div style={{ fontFamily: "var(--serif)", fontSize: 22, fontWeight: 700, color: "var(--ink)", letterSpacing: "-0.02em", lineHeight: 1 }}>
+            Vertex <span style={{ color: "var(--gold-500)", fontStyle: "italic" }}>Advisors</span>
+          </div>
+          <div className="eyebrow" style={{ fontSize: 9, marginTop: 2 }}>Finance & Advisory · Mumbai</div>
         </div>
-        <div className="eyebrow" style={{ fontSize: 9, marginTop: 2 }}>Finance & Advisory · Mumbai</div>
       </Link>
 
       <div className="nav-r-links">
